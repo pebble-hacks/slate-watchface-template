@@ -1,8 +1,3 @@
-(function() {
-  loadOptions();
-  submitHandler();
-})();
-
 function submitHandler() {
   var $submitButton = $('#submitButton');
 
