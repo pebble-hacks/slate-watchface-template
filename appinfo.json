@@ -1,0 +1,22 @@
+{
+  "uuid": "a2ae5e8d-42b0-4f63-a967-b9fe6d1dfeaa",
+  "shortName": "slate-watchface-example",
+  "longName": "slate-watchface-example",
+  "companyName": "MakeAwesomeHappen",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt"],
+  "watchapp": {
+    "watchface": true
+  },
+  "capabilities": [
+    "configurable"
+  ],
+  "appKeys": {
+    "backgroundColor": 0,
+    "twentyFourHourFormat": 1
+  },
+  "resources": {
+    "media": []
+  }
+}
