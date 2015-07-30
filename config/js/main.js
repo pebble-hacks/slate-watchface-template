@@ -7,22 +7,6 @@ $submitButton.on('click', function() {
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 });
 
-function getAndStoreConfigData() {
-  var $backgroundColorPicker = $('#backgroundColorPicker');
-  var $timeFormatCheckbox = $('#timeFormatCheckbox');
-
-  var options = {
-    backgroundColor: $backgroundColorPicker.val(),
-    twentyFourHourFormat: $timeFormatCheckbox[0].checked
-  };
-
-  localStorage.backgroundColor = options.backgroundColor;
-  localStorage.twentyFourHourFormat = options.twentyFourHourFormat;
-
-  console.log('Got options: ' + JSON.stringify(options));
-  return options;
-}
-
 function getQueryParam(variable, defaultValue) {
   var query = location.search.substring(1);
   var vars = query.split('&');
