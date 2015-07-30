@@ -1,23 +1,11 @@
-function submitHandler() {
-  var $submitButton = $('#submitButton');
+var $submitButton = $('#submitButton');
 
-  $submitButton.on('click', function() {
-    console.log('Submit');
+$submitButton.on('click', function() {
+  console.log('Submit');
 
-    var return_to = getQueryParam('return_to', 'pebblejs://close#');
-    document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
-  });
-}
-
-function loadOptions() {
-  var $backgroundColorPicker = $('#backgroundColorPicker');
-  var $timeFormatCheckbox = $('#timeFormatCheckbox');
-
-  if (localStorage.backgroundColor) {
-    $backgroundColorPicker[0].value = localStorage.backgroundColor;
-    $timeFormatCheckbox[0].checked = localStorage.twentyFourHourFormat === 'true';
-  }
-}
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+});
 
 function getAndStoreConfigData() {
   var $backgroundColorPicker = $('#backgroundColorPicker');
